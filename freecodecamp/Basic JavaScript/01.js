@@ -81,3 +81,65 @@ function sum(arr, n) {
     }
   // Only change code above this line
 }
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+    return [];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+console.log(rangeOfNumbers(0, 3))
+
+const myDog = {
+  // Only change code below this line
+name : '',
+legs: 5,
+tails: 5,
+friends: [],
+
+  // Only change code above this line
+};
+// Setup
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+const hatValue = testObj.hat;      // Change this line
+const shirtValue = testObj.shirt;    // Change this line
+// Setup
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  const lookup = {
+    "alpha": "Adams",
+    "bravo":"Boston",
+    "charlie": "Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank",
+  }
+
+  // Only change code above this line
+  result = lookup[val]
+  return result;
+}
+
+phoneticLookup("charlie");
