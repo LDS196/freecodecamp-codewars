@@ -56,11 +56,39 @@
 //   return Object.keys(suspectInfo)[arr.indexOf(Math.max(...arr))]
 // }
 
-const arr = [1,2,3,4,5,6,7,8,9,10];
+// const arr = [1,2,3,4,5,6,7,8,9,10];
 
-var Sum = (arr) => arr.reduce((accum, value) => accum + value, 0)
-console.log( Sum(arr))
-function sum(arr) {
-  let a = arr.reduce((s, current) => s + current, 0)
-  return a;
-} 
+// var Sum = (arr) => arr.reduce((accum, value) => accum + value, 0)
+// console.log( Sum(arr))
+// function sum(arr) {
+//   let a = arr.reduce((s, current) => s + current, 0)
+//   return a;
+// } 
+let list = [
+  {'4': 'dog' }, {'2': 'took'}, {'3': 'his'}, {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'} 
+ ]; 
+
+
+
+
+//  function sentence(list) {
+//  let arr = []
+
+//  let a =  list.map((elem, i) => +Object.keys(elem)).sort( (a, b) => a - b);
+
+//  for(let i = 0; i < a.length; i++){
+//   for(let j = 0; j < a.length; j++){
+//     if(+Object.keys(list[j]) == a[i]){
+//       arr.push(list[j][a[i]])
+//     }
+//   }
+//  }
+//   return arr.join(' ')
+// }
+const sentence = list =>
+  list
+    .sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
+    .map(item => Object.values(item)[0])
+    //.join(' ')
+
+    console.log(sentence(list))
