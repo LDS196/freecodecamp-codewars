@@ -35,24 +35,32 @@
 //   return b.join('')
 
 // }
-const suspectInfo = {
-'James': ['Jacob', 'Bill', 'Lucas'],
-'Johnny': ['David', 'Kyle', 'Lucas'],
-'Peter': ['Lucy', 'Kyle']
-};
-const dead = ['Lucas', 'Bill']
+// const suspectInfo = {
+// 'James': ['Jacob', 'Bill', 'Lucas'],
+// 'Johnny': ['David', 'Kyle', 'Lucas'],
+// 'Peter': ['Lucy', 'Kyle']
+// };
+// const dead = ['Lucas', 'Bill']
 
-function killer(suspectInfo, dead) {
-  let arr = []
-  for(let key in suspectInfo){ 
-    let count = 0;
-    for( let i = 0; i < dead.length; i++){
-      if(suspectInfo[key].includes(dead[i])){
-        count = count + 1;
-      }
-    }
-    arr.push(count)
-  }
-  return Object.keys(suspectInfo)[arr.indexOf(Math.max(...arr))]
-}
+// function killer(suspectInfo, dead) {
+//   let arr = []
+//   for(let key in suspectInfo){ 
+//     let count = 0;
+//     for( let i = 0; i < dead.length; i++){
+//       if(suspectInfo[key].includes(dead[i])){
+//         count = count + 1;
+//       }
+//     }
+//     arr.push(count)
+//   }
+//   return Object.keys(suspectInfo)[arr.indexOf(Math.max(...arr))]
+// }
 
+const arr = [1,2,3,4,5,6,7,8,9,10];
+
+var Sum = (arr) => arr.reduce((accum, value) => accum + value, 0)
+console.log( Sum(arr))
+function sum(arr) {
+  let a = arr.reduce((s, current) => s + current, 0)
+  return a;
+} 
