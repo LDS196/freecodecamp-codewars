@@ -93,24 +93,31 @@
 //     .join(' ')
 
 
-function isPowerOfTwo(n){
-  if( n == 1){
-    return true
-  }
-let count = 0;
-if( n % 2 !== 0){
-  return false
-} else {
-  do {
-    n = n / 2;
-    if( n == 1){
-      return true
-      }
-  } while( n > 1)
- return false
-}
+// function isPowerOfTwo(n){
+//   if( n == 1){
+//     return true
+//   }
+// let count = 0;
+// if( n % 2 !== 0){
+//   return false
+// } else {
+//   do {
+//     n = n / 2;
+//     if( n == 1){
+//       return true
+//       }
+//   } while( n > 1)
+//  return false
+// }
 
+// }
+const nameUser = 'Rodkkk'
+function nicknameGenerator(name){
+let nameArr = name.toLowerCase().split('');
+console.log(nameArr)
+if(name.length < 4){
+ return "Error: Name too short"
+} else if(['a','e','i','u','o'].includes(nameArr[2])){
+  return name.slice(0,4)
+ } else return name.slice(0,3)
 }
-console.log(isPowerOfTwo(1))
-
-console.log(Math.pow(2,0))

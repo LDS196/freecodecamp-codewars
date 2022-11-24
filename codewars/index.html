@@ -7,6 +7,20 @@
   <title>Document</title>
 </head>
 <body>
+  function isPowerOfTwo(n){
+    let count = 0;
+    if( n % 2 !== 0){
+      return false
+    } else {
+      do{
+        n = n / 2;
+        count = count + 1
+      } while( n !== 1)
+     
+    }
+    console.log(count)
+    }
+    isPowerOfTwo(30)
   <style>
     #box-container {
       display: flex;
