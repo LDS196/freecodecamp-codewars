@@ -174,15 +174,26 @@
 //  } 
 // }
 
-let a = [-13,-50,57,13,67,-13,57,108,67]
-function maxTriSum(numbers){
-  let b = []
-  let a = numbers.sort((a, b) => b - a)//.slice(0,3).reduce((acc, value) => acc + value, 0)
-  for(let i = 0; i < a.length; i++){
-    if( !b.includes(a[i])){
-      b.push(a[i])
-    } else continue
+// let a = [-13,-50,57,13,67,-13,57,108,67]
+// function maxTriSum(numbers){
+//   let b = []
+//   let a = numbers.sort((a, b) => b - a)//.slice(0,3).reduce((acc, value) => acc + value, 0)
+//   for(let i = 0; i < a.length; i++){
+//     if( !b.includes(a[i])){
+//       b.push(a[i])
+//     } else continue
+//   }
+//   return b.slice(0,3).reduce((acc, value) => acc + value, 0)
+// }
+
+let a = 4.5
+function getDecimal(n){
+  if( n !== null || n !== undefined|| n !== NaN || n !== "" || n !== Boolean){
+    if(String(n).includes('.')){
+      const b = String(n).indexOf('.')
+      return +('0' + String(n).slice(b))
+    } else return 0
   }
-  return b.slice(0,3).reduce((acc, value) => acc + value, 0)
+
 }
-console.log( maxTriSum(a))
+
