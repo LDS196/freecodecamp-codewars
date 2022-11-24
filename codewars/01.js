@@ -64,9 +64,9 @@
 //   let a = arr.reduce((s, current) => s + current, 0)
 //   return a;
 // } 
-let list = [
-  {'4': 'dog' }, {'2': 'took'}, {'3': 'his'}, {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'} 
- ]; 
+// let list = [
+//   {'4': 'dog' }, {'2': 'took'}, {'3': 'his'}, {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'} 
+//  ]; 
 
 
 
@@ -85,10 +85,32 @@ let list = [
 //  }
 //   return arr.join(' ')
 // }
-const sentence = list =>
-  list
-    .sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
-    .map(item => Object.values(item)[0])
-    //.join(' ')
+// //--------------------
+// const sentence = list =>
+//   list
+//     .sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
+//     .map(item => Object.values(item)[0])
+//     .join(' ')
 
-    console.log(sentence(list))
+
+function isPowerOfTwo(n){
+  if( n == 1){
+    return true
+  }
+let count = 0;
+if( n % 2 !== 0){
+  return false
+} else {
+  do {
+    n = n / 2;
+    if( n == 1){
+      return true
+      }
+  } while( n > 1)
+ return false
+}
+
+}
+console.log(isPowerOfTwo(1))
+
+console.log(Math.pow(2,0))
