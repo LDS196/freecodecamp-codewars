@@ -186,14 +186,94 @@
 //   return b.slice(0,3).reduce((acc, value) => acc + value, 0)
 // }
 
-let a = 4.5
-function getDecimal(n){
-  if( n !== null || n !== undefined|| n !== NaN || n !== "" || n !== Boolean){
-    if(String(n).includes('.')){
-      const b = String(n).indexOf('.')
-      return +('0' + String(n).slice(b))
-    } else return 0
-  }
+// let a = 4.5
+// function getDecimal(n){
+//   if( n !== null || n !== undefined|| n !== NaN || n !== "" || n !== Boolean){
+//     if(String(n).includes('.')){
+//       const b = String(n).indexOf('.')
+//       return +('0' + String(n).slice(b))
+//     } else return 0
+//   }
+// }
 
+// let a = [4, -3, -3, 61, 8, 8]
+// let b = [8, 4, 8, -3, 61]
+// let c;
+// function findMissing(arr1, arr2) {
+//   for( let i = 0; i < arr1.length; i++){
+//     for( let j = 0; j < arr2.length; j++){
+//       if( arr1[i] == arr2[j]){
+//         delete arr2[j] 
+//         delete arr1[i]
+//       } else continue
+//     }
+//   } 
+//  return arr1.filter(() => true)[0]
+// }
+const a = '312'
+// function explode(s) {
+//   let b = s.split('').map(Number);
+//  let arr = []
+// for( let i = 0; i < b.length; i++){
+//   switch(b[i]) {
+//     case 0:
+//       for(let j = 0; j < 0; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+
+//       case 1:
+//         for(let j = 0; j < 1; j++){
+//           arr.push(b[i]);
+//         }
+//         break;
+
+//         case 2:
+//       for(let j = 0; j < 2; j++){
+//         arr.push(b[i]);
+//       }break;
+
+//       case 3:
+//       for(let j = 0; j < 3; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+
+//       case 4:
+//       for(let j = 0; j < 4; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//       case 5:
+//       for(let j = 0; j < 5; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//       case 6:
+//       for(let j = 0; j < 6; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//       case 7:
+//       for(let j = 0; j < 7; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//       case 8:
+//       for(let j = 0; j < 8; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//       case 9:
+//       for(let j = 0; j < 9; j++){
+//         arr.push(b[i]);
+//       }
+//       break;
+//     }
+//   }
+//  return arr.join('')
+// }
+
+function explode(s) {
+  return s.split("").map((e) => e.repeat(+e)).join("");
 }
-
