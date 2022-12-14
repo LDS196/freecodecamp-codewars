@@ -1,4 +1,12 @@
+//"123", "123", "July 9, 2015", "July 9, 2015"
 
+function checkCoupon(a, b, currentDate, expirationDate) {
+  if ((a === b) && (Date.parse(expirationDate) - Date.parse(currentDate) > -1)) {
+    console.log(true)
+  } else console.log(false)
+}
+
+checkCoupon('123a','123','September 5, 2014','October 1, 2014')
 // const S = 'CodeWars'
 // function sortMyString(S) {
 // let even = S.split('').filter((elem, i) => i % 2 == 0).join('');
@@ -210,7 +218,9 @@
 //   } 
 //  return arr1.filter(() => true)[0]
 // }
-const a = '312'
+
+
+// const a = '312'
 // function explode(s) {
 //   let b = s.split('').map(Number);
 //  let arr = []
@@ -274,6 +284,38 @@ const a = '312'
 //  return arr.join('')
 // }
 
-function explode(s) {
-  return s.split("").map((e) => e.repeat(+e)).join("");
-}
+// function explode(s) {
+//   return s.split("").map((e) => e.repeat(+e)).join("");
+// }
+// const a = [ [ 1, 2 ], [ 4, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]]
+// console.log(Array.isArray(a))
+//
+// function getLengthOfMissingArray (arr) {
+//   if(!Array.isArray(arr) || arr.length == 0){
+//     return 0
+//   } else {
+//
+//   let arrLength = []
+//   arr.forEach( (elem) => {
+//     if(elem.length == 0){
+//       return 0
+//     }
+//   })
+//   arr.forEach( (elem) => {
+//     arrLength.push(elem.length)
+//     })
+//
+//
+//
+//   }
+// }
+//
+// console.log(getLengthOfMissingArray(a))
+//
+//
+// arrLength.sort((a, b) => a - b)
+// for(let i = 0; i < arrLength.length - 1; i ++){
+//   if(arrLength[i + 1] - arrLength[i] > 1 ){
+//
+//   }
+// }
