@@ -1,12 +1,32 @@
-//"123", "123", "July 9, 2015", "July 9, 2015"
+let str = "hello world!"
 
-function checkCoupon(a, b, currentDate, expirationDate) {
-  if ((a === b) && (Date.parse(expirationDate) - Date.parse(currentDate) > -1)) {
-    console.log(true)
-  } else console.log(false)
+const runLengthEncoding = (str) => {
+    let arr = []
+    let counter = 1
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1]) {
+            counter++
+        } else {
+            arr.push([counter,str[i]])
+            counter = 1
+        }
+    }
+    return arr
 }
 
-checkCoupon('123a','123','September 5, 2014','October 1, 2014')
+runLengthEncoding(str)
+
+
+// //"123", "123", "July 9, 2015", "July 9, 2015"
+//
+// function checkCoupon(a, b, currentDate, expirationDate) {
+//   if ((a === b) && (Date.parse(expirationDate) - Date.parse(currentDate) > -1)) {
+//     console.log(true)
+//   } else console.log(false)
+// }
+//
+// checkCoupon('123a','123','September 5, 2014','October 1, 2014')
 // const S = 'CodeWars'
 // function sortMyString(S) {
 // let even = S.split('').filter((elem, i) => i % 2 == 0).join('');
@@ -75,8 +95,6 @@ checkCoupon('123a','123','September 5, 2014','October 1, 2014')
 // let list = [
 //   {'4': 'dog' }, {'2': 'took'}, {'3': 'his'}, {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'} 
 //  ]; 
-
-
 
 
 //  function sentence(list) {
